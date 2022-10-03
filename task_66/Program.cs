@@ -1,0 +1,15 @@
+﻿// Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N
+int rec(int m, int n)
+{
+    if (m == n) return m;
+    if (m < n)
+        return rec(m, n - 1) + n;
+    else return rec(n, m - 1) + m;
+}
+
+Console.Write("Введите число M: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("ВВведите число N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Сумма чисел от " + m + " до " + n + " равна: " + rec(m, n));
+
